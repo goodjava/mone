@@ -8,42 +8,68 @@
     <version>1.6.0-jdk21-SNAPSHOT</version>
   </parent>
   <artifactId>test</artifactId>
+
   <dependencies>
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
       <version>25.1-jre</version>
     </dependency>
+
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <version>1.1.2</version>
     </dependency>
+
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-core</artifactId>
       <version>1.1.2</version>
     </dependency>
+
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.7</version>
     </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
     </dependency>
+
+<!--    <dependency>-->
+<!--      <groupId>org.scala-lang</groupId>-->
+<!--      <artifactId>scala-library</artifactId>-->
+<!--      <version>2.10.4</version>-->
+<!--    </dependency>-->
+
     <dependency>
-      <groupId>org.scala-lang</groupId>
-      <artifactId>scala-library</artifactId>
-      <version>2.10.4</version>
-      <scope>compile</scope>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>3.0.22</version>
     </dependency>
-    <dependency>
-      <groupId>run.mone</groupId>
-      <artifactId>processor</artifactId>
-      <version>1.6.0-jdk21-SNAPSHOT</version>
-    </dependency>
+
+
+    <!--    <dependency>-->
+<!--      <groupId>run.mone</groupId>-->
+<!--      <artifactId>processor</artifactId>-->
+<!--      <version>1.6.0-jdk21-SNAPSHOT</version>-->
+<!--    </dependency>-->
+
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>21</source>
+          <target>21</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
